@@ -15,7 +15,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -27,5 +26,48 @@
           </ul>
         </div>
     </nav>
+    <div class="container">
+      <h1>Ügyfél karbantartási nyilvántartás</h1>
+      <form action="#" method="post" class="row" id="pizza">
+          <fieldset>
+              <legend>
+                  Aktuális Ügyfél felhasználó
+                  <div class="row">
+                      <div class="mb-3 col-4">
+                          <label for="azon" class="form-label">Azonosító: </label>
+                          <input type="text" class="form-control" id="azon" name="azon">
+                      </div>
+                      <div class="mb-3 col-4">
+                          <label for="nev" class="form-label">Név: </label>
+                          <input type="text" class="form-control" id="nev", name="nev">
+                      </div>
+                      <div class="mb-3 col-4">
+                          <label for="szulev" class="form-label">Születési év: </label>
+                          <input type="text" class="form-control" id="szulev" name="szulev">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="irszam" class="form-label">Irányítószám: </label>
+                        <input type="text" class="form-control" id="irszam" name="irszam">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="orsz" class="form-label">Orszgág: </label>
+                        <input type="text" class="form-control" id="orsz", name="orsz">
+                    </div>
+                </div>
+              </legend>
+          </fieldset>
+          <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-primary" id="create">Create</button>
+              <button type="button" class="btn btn-info" id="read">Read</button>
+              <button type="button" class="btn btn-success" id="update">Update</button>
+              <button type="button" class="btn btn-danger" id="delete">Delete</button>
+          </div>
+      </form>
+      <div id="ugyfellista">
+
+      </div>
+  </div>
 </body>
 </html>

@@ -27,5 +27,38 @@
           </ul>
         </div>
     </nav>
+    <div class="container">
+      <h1>Befizetés karbantartási nyilvántartás</h1>
+      <form action="#" method="post" class="row" id="fizet">
+          <fieldset>
+              <legend>
+                  Aktuális Befizetés felhasználó
+                  <div class="row">
+                      <div class="mb-3 col-4">
+                          <label for="azon" class="form-label">Azonosító: </label>
+                          <input type="text" class="form-control" id="azon" name="azon">
+                      </div>
+                      <div class="mb-3 col-4">
+                          <label for="datum" class="form-label">Dátum: </label>
+                          <input type="text" class="form-control" id="datum", name="datum">
+                      </div>
+                      <div class="mb-3 col-4">
+                          <label for="osszeg" class="form-label">Ár: </label>
+                          <input type="text" class="form-control" id="osszeg" name="osszeg">
+                      </div>
+                  </div>
+              </legend>
+          </fieldset>
+          <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-primary" id="create">Create</button>
+              <button type="button" class="btn btn-info" id="read">Read</button>
+              <button type="button" class="btn btn-success" id="update">Update</button>
+              <button type="button" class="btn btn-danger" id="delete">Delete</button>
+          </div>
+      </form>
+      <div id="befizetettlista">
+
+      </div>
+  </div>
 </body>
 </html>

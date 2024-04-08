@@ -34,9 +34,11 @@ document.addEventListener("DOMContentLoaded",function(){
     updateButton.addEventListener("click", async function(){        
         const baseUrl ="http://localhost/";
         let object = {
-            pazon: document.getElementById("azon").value,
-            pnev: document.getElementById("nev").value,
-            par: document.getElementById("ar").value
+            azon: document.getElementById("azon").value,
+            nev: document.getElementById("nev").value,
+            szulev: document.getElementById("szulev").value,
+            irszam: document.getElementById("irszam").value,
+            orsz: document.getElementById("orsz").value
         };
         let options = {
             method: "PUT",
@@ -86,8 +88,9 @@ document.addEventListener("DOMContentLoaded",function(){
             <tr>
                 <th>Azonosító: </th>
                 <th>Név: </th>
-                <th>Ár: </th>
-                <th>Művelet: </th>
+                <th>Születési év: </th>
+                <th>Írányítószán: </th>
+                <th>Ország: </th>
             </tr>
         </thead>
         <tbody>`;
@@ -105,6 +108,7 @@ function adatBetoltes(azon, nev, szulev, irszam, orsz){
     let response= fetch(baseUrl, options)
     document.getElementById("azon").value=azon;
     document.getElementById("nev").value=nev;
+    document.getElementById("szulev").value=szulev;
     document.getElementById("irszam").value=irszam;
     document.getElementById("orsz").value=orsz;    
     response.then(function(response){
