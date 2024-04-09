@@ -1,5 +1,5 @@
 <?php
-switch ($_SERVER['REQUEST_METHOD']){
+switch($_SERVER['REQUEST_METHOD']){
     case 'GET':
         require_once 'ugyfelbackend/getugyfel.php';
         break;
@@ -9,7 +9,7 @@ switch ($_SERVER['REQUEST_METHOD']){
     case 'DELETE':
         require_once 'ugyfelbackend/deleteugyfel.php';
         break;
-    case 'UPGRATE':
+    case 'PUT':
         require_once 'ugyfelbackend/putugyfel.php';
         break;
 }
