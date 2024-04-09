@@ -1,5 +1,5 @@
 <?php
-$connection = new mysqli("localhost", "root", "", "pizza");
+$connection = new mysqli("localhost", "root", "", "tagdij");
 if($connection->connect_error){
     die('Connection failed: '. $connection->connect_error);
 }
