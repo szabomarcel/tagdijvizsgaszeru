@@ -10,7 +10,7 @@ if (count($kereSzoveg) > 1) {
 } else {
     $sql = 'SELECT * FROM befiz WHERE 1';
 }
-require_once './databaseconnect.php';
+require_once './database.php';
 $result = $connection->query($sql);
 if ($result->num_rows > 0) {
     $befizetések = array();

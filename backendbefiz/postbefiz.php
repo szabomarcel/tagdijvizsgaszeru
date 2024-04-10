@@ -2,7 +2,7 @@
 $azon =$_POST["azon"];
 $datum=$_POST["datum"];	
 $osszeg =$_POST["osszeg"];
-require_once './databaseconnect.php';
+require_once './database.php';
 $sql = "INSERT INTO befiz (datum, osszeg) VALUES (?, ?) Where azon=?";
 $stmt = $connection->prepare($sql);
 $stmt->bind_param("sii", $datum, $osszeg, $azon);  

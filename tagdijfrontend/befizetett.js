@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function(){
     //const baseUrl ="http://localhost/pizzakarbantartasa/pizzakarban/index.php?pizzakarban";
 
     createButton.addEventListener("click", async function () {
-        const baseUrl ="http://localhost/";
+        const baseUrl ="http://localhost/tagdijvizsgaszeru/index.php?befiz";
         const formdata = new FormData(document.getElementById("nev"));
         let options = {
             method: "POST",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     deleteButton.addEventListener("click", async function () {
-        const baseUrl =`http://localhost//${document.getElementById("azon").value}`;    
+        const baseUrl =`'http://localhost/tagdijvizsgaszeru/index.php?befiz'${document.getElementById("azon").value}`;    
         let options = {
             method: "DELETE",        
         };
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     updateButton.addEventListener("click", async function(){        
-        const baseUrl ="http://localhost/";
+        const baseUrl ="'http://localhost/tagdijvizsgaszeru/index.php?befiz'";
         let object = {
             azon: document.getElementById("azon").value,
             datum: document.getElementById("datum").value,
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     readButton.addEventListener("click", async function(){
-        const baseUrl ="http://localhost/";
+        const baseUrl ="'http://localhost/tagdijvizsgaszeru/index.php?befiz'";
         let response = await fetch(baseUrl);
         if(response.ok){
             let data = await response.json();
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 
 function adatBetoltes(azon, datum, osszeg){
-    let baseUrl='http://localhost/' + azon;
+    let baseUrl='http://localhost/tagdijvizsgaszeru/index.php?befiz' + azon;
     let options={
         method: "GET",
         mode: "cors"

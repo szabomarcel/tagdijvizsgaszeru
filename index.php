@@ -7,7 +7,7 @@
         require_once 'ugyfelbackend/index.php';
     }
     else if($keresUgyfel[0] === "befiz"){
-        require_once 'befizbackend/index.php';
+        require_once 'backendbefiz/index.php';
     }
     else{
         http_response_code(405);
